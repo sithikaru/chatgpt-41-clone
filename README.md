@@ -3,7 +3,7 @@
 A private, open-source ChatGPT web client built with Next.js 14 (App Router, React, Tailwind), designed to look and feel like the official ChatGPT app.  
 **Connects to OpenAI's GPT-4.1 model using your own OpenAI API key** – perfect for personal or educational usage when you want access to GPT-4.1 before it appears in the official web UI.
 
-![screenshot](./screenshot.png)
+![screenshot](/ss.jpeg)
 
 ---
 
@@ -23,7 +23,7 @@ A private, open-source ChatGPT web client built with Next.js 14 (App Router, Rea
 ### 1. Clone This Repo
 
 ```bash
-git clone https://github.com/<YOUR_USERNAME>/chatgpt-41-clone.git
+git clone https://github.com/sithikaru/chatgpt-41-clone.git
 cd chatgpt-41-clone
 ```
 
