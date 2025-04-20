@@ -100,7 +100,7 @@ export default function ChatPage() {
         <input
           type="text"
           ref={inputRef}
-          className="flex-1 border rounded-lg px-4 py-2 mr-2 outline-none"
+          className="flex-1 border rounded-lg px-4 py-2 mr-2 outline-none text-black"
           placeholder="Type your message…"
           value={input}
           disabled={loading}
