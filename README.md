@@ -1,5 +1,3 @@
-# ChatGPT-4.1 Private Web UI
-
 A private, open-source ChatGPT web client built with Next.js 14 (App Router, React, Tailwind), designed to look and feel like the official ChatGPT app.  
 **Connects to OpenAI's GPT-4.1 model using your own OpenAI API key** – perfect for personal or educational usage when you want access to GPT-4.1 before it appears in the official web UI.
 
@@ -36,11 +34,16 @@ npm install
 ### 3. Add Your OpenAI API Key
 
 Create a **`.env.local`** file in the root folder with only this line:
-```
+
+```env
 OPENAI_API_KEY=sk-...
 ```
-> You can create and manage your OpenAI API keys [here](https://platform.openai.com/api-keys).  
-> **Never share or commit your API key!**
+
+> 🔒 **Important:**
+> - Use a **secret key** from your OpenAI dashboard: https://platform.openai.com/account/api-keys
+> - It **must** start with `sk-` (no `proj-` prefix).
+> - **Do not** include backticks, extra quotes, or trailing characters (e.g., backticks or spaces).
+> - After saving, reload your environment variables (`source .env.local`) or restart your terminal/app.
 
 ### 4. (Optional) Add Custom Avatars
 
@@ -114,6 +117,3 @@ MIT – use freely for any educational/non-commercial/personal project.
 
 **Enjoy chatting with GPT-4.1!**
 
-```
-
----
