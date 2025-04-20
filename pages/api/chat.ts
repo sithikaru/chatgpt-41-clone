@@ -1,3 +1,4 @@
+// pages/api/chat.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 type Message = {
@@ -9,8 +10,9 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
+  }
 
   const { messages } = req.body;
   if (!Array.isArray(messages)) {
@@ -41,8 +43,6 @@ export default async function handler(
     }
 
     const data = await response.json();
-
-    // Defensive: Make sure we reply with string
     return res.status(200).json({
       reply: data.choices?.[0]?.message?.content || 'No response.',
     });
