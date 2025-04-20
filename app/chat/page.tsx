@@ -48,7 +48,7 @@ export default function ChatPage() {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-gray-100">
+    <div className="flex flex-col h-screen bg-gray-100 text-black">
       {/* Header */}
       <div className="p-4 bg-white shadow flex justify-between items-center">
         <div className="font-bold text-lg">GPT-4.1 Chat</div>
@@ -56,16 +56,16 @@ export default function ChatPage() {
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto px-2 py-4">
+      <div className="flex-2 overflow-y-auto px-2 py-4">
         {messages.map((msg, idx) => (
           <div
             key={idx}
             className={`flex mb-2 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
           >
             <div
-              className={`max-w-lg px-4 py-2 rounded-lg shadow text-sm whitespace-pre-line ${
+              className={` px-4 py-2 rounded-lg shadow text-sm whitespace-pre-line ${
                 msg.role === 'assistant'
-                  ? 'bg-white text-gray-900'
+                  ? 'bg-white text-gray-900 w-full lg:w-3/4 '
                   : 'bg-blue-600 text-white'
               }`}
             >
